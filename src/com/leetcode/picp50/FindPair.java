@@ -1,6 +1,5 @@
-package com.leetcode.fiftypicp;
+package com.leetcode.picp50;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 

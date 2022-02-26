@@ -1,4 +1,4 @@
-package com.leetcode.fiftypicp;
+package com.leetcode.picp50;
 
 public class Maximumsubarray {
     static int maxSubArray(int[] nums) {
