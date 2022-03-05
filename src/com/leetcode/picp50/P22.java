@@ -7,6 +7,7 @@ public class P22 {
         int[] arr = new int[]{2,3,1,1,4};
         boolean res = canJump(arr);
         System.out.println(res); // true
+        System.out.println();
     }
 
     static boolean canJump(int[] arr){

@@ -15,6 +15,7 @@ public class P21 {
         arr1[0] = 1;
         int[] arr2 = new int[length];
         arr2[length-1] = 1;
+        System.out.println();
 
         // 4 5 1 8 2
         // 1
