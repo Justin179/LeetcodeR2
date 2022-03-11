@@ -18,24 +18,24 @@ public class P41 {
         System.out.println(res);
     }
 
-
     static int[][] insertInterval(int[][] intervals, int[] newInterval){
         ArrayList<int[]> output = new ArrayList<>();
+
         int i = 0;
         // 前段
-        while(i<intervals.length && intervals[i][1] < newInterval[0]){
+        while (i < intervals.length && intervals[i][1] < newInterval[0]){
             output.add(intervals[i]);
             i++;
         }
 
-        // 中段(one) 當前的頭<=newInterval的尾
-        while (i<intervals.length && intervals[i][0]<=newInterval[1]){
-            // merge的頭 & merge的尾
+        // 中段
+        while (i<intervals.length && intervals[i][0] <= newInterval[1]){
             newInterval[0] = Math.min(intervals[i][0],newInterval[0]);
             newInterval[1] = Math.max(intervals[i][1],newInterval[1]);
+
             i++;
         }
-        output.add(newInterval);
+        output.add(newInterval); // 中間的全做完後，只會剩下一個
 
         // 後段
         while (i<intervals.length){
@@ -43,8 +43,36 @@ public class P41 {
             i++;
         }
 
+        // 轉int[][]
         return output.toArray(new int[output.size()][2]);
     }
+
+//    static int[][] insertInterval(int[][] intervals, int[] newInterval){
+//        ArrayList<int[]> output = new ArrayList<>();
+//        int i = 0;
+//        // 前段
+//        while(i<intervals.length && intervals[i][1] < newInterval[0]){
+//            output.add(intervals[i]);
+//            i++;
+//        }
+//
+//        // 中段(one) 當前的頭<=newInterval的尾
+//        while (i<intervals.length && intervals[i][0]<=newInterval[1]){
+//            // merge的頭 & merge的尾
+//            newInterval[0] = Math.min(intervals[i][0],newInterval[0]);
+//            newInterval[1] = Math.max(intervals[i][1],newInterval[1]);
+//            i++;
+//        }
+//        output.add(newInterval);
+//
+//        // 後段
+//        while (i<intervals.length){
+//            output.add(intervals[i]);
+//            i++;
+//        }
+//
+//        return output.toArray(new int[output.size()][2]);
+//    }
 
 
 
