@@ -3,7 +3,7 @@ package com.leetcode.picp50;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class P43 {
+public class P43_p1 {
     static class Tree{
         int data;
         Tree left;
@@ -47,25 +47,37 @@ public class P43 {
     static int max = 0;
 
     static int dfs(Tree root){
-        if(root==null)
+        if (root==null)
             return 0;
 
-        int currVal = root.data;
+        int left = dfs(root.left);
+        int right = dfs(root.right);
+        left = Math.max(left,0);
+        right = Math.max(right,0);
 
-        int leftVal = dfs(root.left);
-        int rightVal = dfs(root.right);
-        leftVal = Math.max(leftVal,0);
-        rightVal = Math.max(rightVal,0);
-
-        int sum = currVal+leftVal+rightVal;
+        int sum = root.data + left + right;
         if(sum>max)
             max = sum;
-
-        // return 只能挑大邊
-        return currVal + max(leftVal,rightVal,0);
+        return root.data + max(left,right,0);
     }
 
     static int max(Integer... vals) {
         return Collections.max(Arrays.asList(vals));
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
