@@ -1,4 +1,4 @@
-package com.codility;
+package com.codility.woonetwork;
 
 public class Task2 {
     public static void main(String[] args) {
