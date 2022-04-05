@@ -3,7 +3,7 @@ package com.leetcode.fundamentals;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Leetcode1 {
+public class Lc1 {
 
     public static void main(String[] args) {
 //        int[] nums = new int[]{2,7,11,15};

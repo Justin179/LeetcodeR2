@@ -3,7 +3,7 @@ package com.leetcode.fundamentals;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Leetcode3 {
+public class Lc3 {
     public static void main(String[] args) {
         String s = "abcabcbb"; // 8
         int res = lengthOfLongestSubstring(s);
