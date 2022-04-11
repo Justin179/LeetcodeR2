@@ -1,4 +1,4 @@
-package com.leetcode.fundamentals;
+package com.ubiquiti;
 
 public class ListNode {
     int val;
