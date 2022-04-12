@@ -1,9 +1,6 @@
 package com.ubiquiti;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Q4 {
     public static void main(String[] args) { // lc 268
@@ -13,7 +10,39 @@ public class Q4 {
         System.out.println(res);
     }
 
-    // 需找到更好的解法
+    /*
+        這個可以
+     */
+    public static int missingNumber(int[] nums) {
+        int sum1 = 0;
+        int sum2 = 0;
+        for (int i : nums){
+            sum1+=i;
+        }
+
+        for (int i = 0; i<=nums.length; i++){
+            sum2+=i;
+        }
+
+        return Math.abs(sum1-sum2);
+    }
+}
+
+
+
+/*  需找到更好的解法
+    public static int missingNumber(int[] nums) {
+        Set<Integer> set = new HashSet<>();
+        for (int i : nums){
+            set.add(i);
+        }
+        for (int i = 0; i<=nums.length; i++){ // 0 1 2 3
+            if (!set.contains(i))
+                return i;
+        }
+        return -1;
+    }
+
     public static int missingNumber(int[] nums) {
         int n = nums.length;
         Map<Integer,Integer> map = new HashMap<>();
@@ -30,4 +59,4 @@ public class Q4 {
 
         return 0;
     }
-}
+ */
