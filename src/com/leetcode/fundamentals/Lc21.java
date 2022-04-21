@@ -1,8 +1,5 @@
 package com.leetcode.fundamentals;
 
-import java.util.LinkedList;
-import java.util.List;
-
 public class Lc21 {
     public static void main(String[] args) {
         ListNode l1 = new ListNode(1);

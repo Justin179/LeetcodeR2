@@ -1,7 +1,5 @@
 package com.leetcode.fundamentals;
 
-import java.util.Stack;
-
 public class Lc234_16th {
     public boolean isPalindrome(ListNode head) {
 
