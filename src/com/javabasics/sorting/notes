@@ -1,0 +1,27 @@
+Bubble Sort -> 這個很沒效率就可以先跳過
+
+Insertion Sort
+
+Selection Sort
+
+Usually quicksort is considered best for arrays and mergesort for linked lists.
+
+    Merge Sort (重要) -> The upper-bound for heap-sort running time is O(n log n) which is same as Merge-sort
+                     -> the most important sorting algorithm is merge sort its time complexity is O(nLog(n))
+
+    Quick Sort (重要) -> As of now the most optimal algorithm is Quick Sort with time complexity of O(nlogn)
+                     -> Quicksort has some of the best cache performance among linearithmic comparison sorts and is also the fastest in-place sorting algorithm.
+
+Heap Sort -> According to me, Heap Sort is really important and useful.
+
+------------------------ in addition
+Counting Sort
+Radix Sort
+Bucket Sort
+
+https://favtutor.com/blogs/sorting-algorithms-java
+
+
+When we are talking algorithms, usually the best solution depends on the data.
+For example, if you don't really know your data I would say quicksort[1] or mergesort[2] ,
+which will sort the elements in O(n logn).
