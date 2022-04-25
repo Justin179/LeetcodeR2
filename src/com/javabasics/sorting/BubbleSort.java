@@ -5,7 +5,11 @@ import java.util.Arrays;
 public class BubbleSort {
 
     /*
+    兩兩比較，左大右小 -> swap
     time:
+        best: 已經排序 = no swap 只需走過一遍 O(n)
+        worst: 大到小排序，每一個都要swap O(n) + 走一遍O(n) = n^2
+
     space:
      */
 
